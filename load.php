@@ -3,13 +3,13 @@
 $db = new PDO('mysql:host=127.0.0.1;dbname=bdadam', 'bdadam', 'jzjcXw;560');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-$query = $db->query("
+$query = $db->$query("
 	SELECT *
 	FROM chat
 ");
 
 $messages = array();
-while($msg = query->fetch()){
+while($msg = $query->fetch()){
 	if (!empty($msg)) {
 		$messages[] = $msg;
 	}
